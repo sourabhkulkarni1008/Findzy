@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khan Chicha Mandi House And Family Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+        .ratings {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .rating-item {
+            margin-right: 20px;
+            font-size: 1.1em;
+        }
+        .rating-item strong {
+            color: #e44d26; /* A nice orange/red for ratings */
+        }
+        .buttons button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        .cuisine-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cuisine-list li {
+            background-color: #e9e9e9;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        /* New Menu Styles */
+        .menu-container {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .menu-category {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #f0f0f0;
+            border-radius: 8px;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+        .menu-item:hover {
+            background-color: #f9f9f9;
+        }
+        .menu-item-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        .menu-item-details {
+            flex-grow: 1;
+        }
+        .dish-name {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+        }
+        .dish-price {
+            font-size: 1em;
+            color: #555;
+            margin: 0;
+        }
+        .indicator-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+        }
+        .veg-icon {
+            background-color: #28a745;
+        }
+        .non-veg-icon {
+            background-color: #e44d26;
+        }
+        /* Adjust padding for items with no image */
+        .menu-item.no-image {
+            padding-left: 35px; /* Space for the icon */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Khan Chicha Mandi House And Family Restaurant</h1>
+        <h2>Mandi, North Indian, Chinese, Mughlai, Seafood, Kebab, Biryani, Desserts</h2>
+
+        <div class="cuisine-list">
+            <li>Mandi</li>
+            <li>North Indian</li>
+            <li>Chinese</li>
+            <li>Mughlai</li>
+            <li>Seafood</li>
+            <li>Kebab</li>
+            <li>Biryani</li>
+            <li>Desserts</li>
+        </div>
+
+        <div class="details">
+            <p><strong>Location:</strong> 123 Restaurant Lane, Foodie City, State 12345</p>
+            <p><strong>Contact:</strong> +91 98765 43210 | info@khanchicha.com</p>
+        </div>
+
+        <div class="ratings">
+            <div class="rating-item">Dining Rating: <strong>3</strong></div>
+            <div class="rating-item">Delivery Rating: <strong>3.4</strong> (6,248 total ratings)</div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="alert('Getting directions...')">Direction</button>
+            <button onclick="alert('Sharing restaurant details...')">Share</button>
+            <button onclick="alert('Viewing reviews...')">Reviews</button>
+        </div>
+
+        <div class="menu-container">
+            <h3 class="menu-category">Rice Dishes</h3>
+
+            <div class="menu-item no-image">
+                <div class="indicator-icon veg-icon"></div>
+                <div class="menu-item-details">
+                    <p class="dish-name">Steam Rice</p>
+                    <p class="dish-price">₹70</p>
+                </div>
+            </div>
+
+            <div class="menu-item no-image">
+                <div class="indicator-icon veg-icon"></div>
+                <div class="menu-item-details">
+                    <p class="dish-name">Masala Rice</p>
+                    <p class="dish-price">₹139</p>
+                </div>
+            </div>
+
+            <div class="menu-item no-image">
+                <div class="indicator-icon veg-icon"></div>
+                <div class="menu-item-details">
+                    <p class="dish-name">Jeera Rice</p>
+                    <p class="dish-price">₹119</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="indicator-icon veg-icon"></div>
+                <img src="https://placehold.co/80x80/a7e9af/4F4F4F?text=Veg+Pulav" alt="Veg Pulav" class="menu-item-image">
+                <div class="menu-item-details">
+                    <p class="dish-name">Veg Pulav</p>
+                    <p class="dish-price">₹139</p>
+                </div>
+            </div>
+
+            <div class="menu-item no-image">
+                <div class="indicator-icon veg-icon"></div>
+                <div class="menu-item-details">
+                    <p class="dish-name">Dal Khichdi</p>
+                    <p class="dish-price">₹149</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="indicator-icon non-veg-icon"></div>
+                <img src="https://placehold.co/80x80/f0a08c/4F4F4F?text=Egg+Biryani" alt="Egg Biryani" class="menu-item-image">
+                <div class="menu-item-details">
+                    <p class="dish-name">Egg Biryani</p>
+                    <p class="dish-price">₹159</p>
+                </div>
+            </div>
+
+            <div class="menu-item no-image">
+                <div class="indicator-icon non-veg-icon"></div>
+                <div class="menu-item-details">
+                    <p class="dish-name">Egg Fried Rice</p>
+                    <p class="dish-price">₹149</p>
+                </div>
+            </div>
+
+            <div class="menu-item no-image">
+                <div class="indicator-icon veg-icon"></div>
+                <div class="menu-item-details">
+                    <p class="dish-name">Veg Fried Rice</p>
+                    <p class="dish-price">₹139</p>
+                </div>
+            </div>
+
+            <div class="menu-item no-image">
+                <div class="indicator-icon veg-icon"></div>
+                <div class="menu-item-details">
+                    <p class="dish-name">Tomato Rice</p>
+                    <p class="dish-price">₹139</p>
+                </div>
+            </div>
+
+            <div class="menu-item no-image">
+                <div class="indicator-icon veg-icon"></div>
+                <div class="menu-item-details">
+                    <p class="dish-name">Biryani Rice</p>
+                    <p class="dish-price">₹119</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

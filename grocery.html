@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery & Snacks</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8; /* Subtle blue tint */
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+            margin-right: 20px; /* Space between button and title */
+        }
+        .back-btn:hover {
+            background-color: #e9e9e9;
+        }
+        .back-btn i {
+            font-size: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin: 0; /* Reset margin for h1 */
+            flex-grow: 1; /* Allow h1 to take remaining space */
+        }
+        
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .category-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .category-card .title {
+            font-weight: 500;
+            font-size: 16px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-btn"><i class="bi bi-arrow-left-circle"></i> Back</a>
+            <h1>Shop by Category</h1>
+        </div>
+
+        <h2>Grocery & Kitchen</h2>
+        <div class="category-grid">
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop" alt="Vegetables & Fruits">
+                <p class="title">Vegetables & Fruits</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1595748423804-2b94890ea4f7?q=80&w=1964&auto=format&fit=crop" alt="Atta, Rice & Dal">
+                <p class="title">Atta, Rice & Dal</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1577859533718-87071a3397c8?q=80&w=1974&auto=format&fit=crop" alt="Oil, Ghee & Masala">
+                <p class="title">Oil, Ghee & Masala</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1628088062854-2a74a36219c2?q=80&w=1974&auto=format&fit=crop" alt="Dairy & Bakery">
+                <p class="title">Dairy & Bakery</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1509440159596-024908877212?q=80&w=1974&auto=format&fit=crop" alt="Cereals">
+                <p class="title">Cereals</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1604503468825-a27f8b408783?q=80&w=1974&auto=format&fit=crop" alt="Chicken & Fish">
+                <p class="title">Chicken & Fish</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1556909172-6ab63f18fd12?q=80&w=2070&auto=format&fit=crop" alt="Kitchenware">
+                <p class="title">Kitchenware</p>
+            </a>
+        </div>
+
+        <h2>Snacks & Drinks</h2>
+        <div class="category-grid">
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?q=80&w=1974&auto=format&fit=crop" alt="Chips & Namkeen">
+                <p class="title">Chips & Namkeen</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1582501834937-35447328f554?q=80&w=1962&auto=format&fit=crop" alt="Chocolates">
+                <p class="title">Chocolates</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=1974&auto=format&fit=crop" alt="Juices">
+                <p class="title">Juices</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1597318181409-cf62d9b36a85?q=80&w=1974&auto=format&fit=crop" alt="Tea">
+                <p class="title">Tea & Coffee</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?q=80&w=1974&auto=format&fit=crop" alt="Instant Food">
+                <p class="title">Instant Food</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1603307768398-25c523255649?q=80&w=1974&auto=format&fit=crop" alt="Sauces">
+                <p class="title">Sauces & Spreads</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1604353942399-b7b47913a44b?q=80&w=1976&auto=format&fit=crop" alt="Paan Corner">
+                <p class="title">Paan Corner</p>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?q=80&w=1974&auto=format&fit=crop" alt="Ice Creams">
+                <p class="title">Ice Creams</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

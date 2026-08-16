@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiration for your first order</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .desktop-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+        }
+        .back-btn:hover {
+            background-color: #e9e9e9;
+        }
+        .back-btn i {
+            font-size: 20px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+        }
+
+        .filters {
+            padding: 10px 0;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 10px 15px;
+            font-size: 14px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .filter-btn:hover {
+            background-color: #e9e9e9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .restaurant-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .restaurant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .card-image-container {
+            position: relative;
+        }
+
+        .card-image-container img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .offer-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #0d6efd;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .card-details {
+            padding: 15px;
+            position: relative;
+            min-height: 100px; /* Ensure space for positioned price */
+        }
+
+        .card-details .name {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+        }
+
+        .card-details .cuisine {
+            font-size: 14px;
+            color: #666;
+            margin: 0 0 10px 0;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .rating {
+            background-color: #28a745;
+            color: white;
+            padding: 3px 7px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+        
+        .rating .bi-star-fill {
+            font-size: 10px;
+        }
+
+        .price {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            color: #28a745;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        @media (max-width: 992px) {
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="desktop-container">
+        <div class="header">
+            <a href="index.html" class="back-btn"><i class="bi bi-arrow-left-circle"></i> Back</a>
+            <input type="text" class="search-bar" placeholder="Search for restaurants, dishes...">
+        </div>
+        <div class="filters">
+            <button class="filter-btn">Sort By</button>
+            <button class="filter-btn">Pure Veg</button>
+            <button class="filter-btn">Cuisines</button>
+            <button class="filter-btn">Rating 4.0+</button>
+        </div>
+        <div class="content" id="restaurant-content">
+            <a href="khan_chicha.html" class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="images/khan chacha.jpg" alt="Khan Chicha">
+                    <div class="offer-tag">50% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Khan Chicha Family Restaurant</p>
+                    <p class="cuisine">Beside Power pertrol pump,near Bhagat Singh circle,Bidar</p>
+                    <div class="info-row">
+                        <span class="rating">4.3<i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">15-20 mins</span>
+                </div>
+            </a>
+            <!-- Restaurant Card 11 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="images/sitara.jpg" alt="Restaurant Food">
+                    <div class="offer-tag">40% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Sitara Restaurant</p>
+                    <p class="cuisine">MIK Complex,Udgir road,Bidar</p>
+                    <div class="info-row">
+                        <span class="rating">4.1 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">25-30 mins</span>
+                </div>
+            </div>
+            <!-- Restaurant Card 12 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1965&auto=format&fit=crop" alt="Hotel Buffet">
+                    <div class="offer-tag">10% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Kamat Hotel</p>
+                    <p class="cuisine">Vegetarian, Udupi</p>
+                    <div class="info-row">
+                        <span class="rating">4.5 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹250 for one</span>
+                </div>
+            </div>
+            <!-- Restaurant Card 1 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://media.istockphoto.com/id/1345623226/photo/chicken-biryani.jpg?s=612x612&w=0&k=20&c=p_is_3T_1_x_iT_pYYi_s_s1LSVp3s_l_s_of_n2_dE=" alt="Biryani">
+                    <div class="offer-tag">50% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Kiran Family Restaurant</p>
+                    <p class="cuisine">North Indian, Biryani, Afghan</p>
+                    <div class="info-row">
+                        <span class="rating">4.3 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹200 for one</span>
+                </div>
+            </div>
+            <!-- Restaurant Card 2 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1565299585323-15d171b732b7?q=80&w=1981&auto=format&fit=crop" alt="Biryani">
+                    <div class="offer-tag">50% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Shama Biryani Hotel</p>
+                    <p class="cuisine">Biryani, Hyderabadi</p>
+                    <div class="info-row">
+                        <span class="rating">4.1 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹250 for one</span>
+                </div>
+            </div>
+             <!-- Restaurant Card 3 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1887&auto=format&fit=crop" alt="Salad">
+                    <div class="offer-tag">50% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Green Leaf Cafe</p>
+                    <p class="cuisine">Continental, Italian, Healthy Food</p>
+                    <div class="info-row">
+                        <span class="rating">4.5 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹300 for one</span>
+                </div>
+            </div>
+            <!-- Restaurant Card 4 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format&fit=crop" alt="BBQ">
+                    <div class="offer-tag">20% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">BBQ Nation</p>
+                    <p class="cuisine">Barbecue, North Indian, Kebab</p>
+                    <div class="info-row">
+                        <span class="rating">4.9 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹600 for one</span>
+                </div>
+            </div>
+            <!-- Restaurant Card 5 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=1980&auto=format&fit=crop" alt="Pancakes">
+                    <div class="offer-tag">30% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">The Pancake Story</p>
+                    <p class="cuisine">Desserts, Bakery, Waffles</p>
+                    <div class="info-row">
+                        <span class="rating">4.6 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹150 for one</span>
+                </div>
+            </div>
+             <!-- Restaurant Card 6 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=2070&auto=format&fit=crop" alt="Pizza">
+                    <div class="offer-tag">40% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Pizza House</p>
+                    <p class="cuisine">Pizza, Fast Food, Italian</p>
+                    <div class="info-row">
+                        <span class="rating">4.2 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹350 for one</span>
+                </div>
+            </div>
+            <!-- Restaurant Card 7 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=2080&auto=format&fit=crop" alt="Sandwich">
+                    <div class="offer-tag">10% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Subway</p>
+                    <p class="cuisine">Sandwich, Healthy Food, Salads</p>
+                    <div class="info-row">
+                        <span class="rating">4.0 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹180 for one</span>
+                </div>
+            </div>
+            <!-- Restaurant Card 8 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://media.istockphoto.com/id/1292635321/photo/veg-steam-momo-in-bamboo-dim-sum-steamer-lettuce-leaf-in-background.jpg?s=612x612&w=0&k=20&c=Rj2-a-aFz-Mh_pA42-J8J2h-mS_tVv_2-f2_E-3_jY=" alt="Momos">
+                    <div class="offer-tag">60% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Wow! Momo</p>
+                    <p class="cuisine">Chinese, Momos, Fast Food</p>
+                    <div class="info-row">
+                        <span class="rating">4.4 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹120 for one</span>
+                </div>
+            </div>
+             <!-- Restaurant Card 9 -->
+            <div class="restaurant-card">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1565299589195-d6d4a5a8a2a9?q=80&w=1981&auto=format&fit=crop" alt="Tacos">
+                    <div class="offer-tag">25% OFF</div>
+                </div>
+                <div class="card-details">
+                    <p class="name">Taco Bell</p>
+                    <p class="cuisine">Mexican, Tacos, Fast Food</p>
+                    <div class="info-row">
+                        <span class="rating">4.7 <i class="bi bi-star-fill"></i></span>
+                    </div>
+                    <span class="price">₹220 for one</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

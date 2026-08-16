@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #FFA500; /* Orange */
+    --dark-color: #121212;
+    --light-color: #f8f9fa;
+    --light-gray-color: #e9ecef; /* Slightly darker white */
+    --text-color: #333;
+    --text-light: #fff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+/* --- Brand Theme --- */
+.navbar-brand {
+    color: var(--text-light) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e69500;
+    border-color: #e69500;
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* --- Header --- */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: linear-gradient(180deg, var(--dark-color) 0%, #2c2c2c 100%);
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-image-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.hero-image-container img {
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    height: auto;
+}
+
+/* --- Services Section --- */
+#services .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#services .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+#services .card i {
+    color: var(--primary-color);
+}
+
+/* --- Comparison Section --- */
+#about {
+    background-color: var(--light-color);
+}
+
+.feature-list .list-group-item {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    padding-left: 0;
+}
+
+.feature-list i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.comparison-chart .table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.comparison-chart .table-dark {
+    background-color: var(--dark-color);
+}
+
+/* --- Testimonials Section --- */
+#testimonials {
+    background-color: var(--light-gray-color);
+}
+
+#testimonials .card {
+    border: none;
+    border-radius: 15px;
+    background-color: #fdfdfd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#testimonials .card-footer {
+    background-color: transparent;
+}
+
+/* --- Download Section --- */
+#download {
+    background-color: var(--light-color);
+}
+
+.app-mockup {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.btn-dark i {
+    margin-right: 8px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-color);
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* --- Login Page --- */
+.login-page {
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Important to contain the pseudo-element */
+}
+
+.login-page::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Adjust to cover blur edges */
+    left: -10px; /* Adjust to cover blur edges */
+    right: -10px; /* Adjust to cover blur edges */
+    bottom: -10px; /* Adjust to cover blur edges */
+    background-image: url('images/findzy logo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px); /* Apply blur to the background image */
+    z-index: -1; /* Place behind content */
+    background-color: rgba(0, 0, 0, 0.5); /* Add transparent overlay */
+}
+
+.login-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+}
